@@ -11,7 +11,7 @@ public class AspectAround extends AbstractAspect{
 
     @Around("anySetUserMethod()")
     public void actionAroundMethodSet(ProceedingJoinPoint pjp){
-        System.out.println("Around Advice. Before method " + pjp.getSignature().getName() + " execution");
+        System.out.println("Around Advice. Before method " + pjp.getSignature().getName() + "() execution");
 
         try {
             pjp.proceed();
@@ -19,7 +19,7 @@ public class AspectAround extends AbstractAspect{
             throwable.printStackTrace();
         }
 
-        System.out.println("Around Advice. After method " + pjp.getSignature().getName() + " execution");
+        System.out.println("Around Advice. After method " + pjp.getSignature().getName() + "() execution");
         System.out.println("");
     }
 

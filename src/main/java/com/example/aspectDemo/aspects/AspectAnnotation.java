@@ -18,7 +18,7 @@ public class AspectAnnotation {
     public void actionAroundAnnotatedMethod(JoinPoint joinPoint, Object value){
 //        System.out.println("Around Advice. Before annotated method execution");
 
-        System.out.println("AfterReturning Advice. Annotated method " +joinPoint.getSignature().getName() + " execution returns: " + value.toString());
+        System.out.println("AfterReturning Advice. Annotated method " +joinPoint.getSignature().getName() + "() execution returns: " + value.toString());
         System.out.println("");
     }
 

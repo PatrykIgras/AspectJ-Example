@@ -31,7 +31,7 @@ public class UserService {
 
     public void setBirthDate(LocalDate date){
         if (date.isAfter(LocalDate.now()) || date.isEqual(LocalDate.now())) {
-            throw new IllegalArgumentException("Data jest nieprawidłowa");
+            throw new IllegalArgumentException("The Birth Date is incorrect");
         } else {
             user.setBirthDate(date);
         }
